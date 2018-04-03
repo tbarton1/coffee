@@ -9,6 +9,16 @@ use App\Coffee;
 
 class CoffeeController extends Controller
 {
+    public function show(Coffee $coffee){
+      
+      //$coffee = Coffee::find($id);
+      
+      //return $coffee;
+      return view('coffees.show', compact('coffee'));
+      
+      
+    }
+  
     public function showCoffees(){
       // Query builder syntax
       // $coffees - DB::tables('coffees')->get();

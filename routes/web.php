@@ -14,4 +14,8 @@
     // return view('welcome');
 Route::get('/', 'ContentsController@home');
 
+Route::get('/coffees/{coffee}', 'CoffeeController@show');
+
 Route::get('/coffees', 'CoffeeController@showCoffees');
+
+Route::get('/members', 'MembersController@showMembers');
