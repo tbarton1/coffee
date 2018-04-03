@@ -14,7 +14,7 @@ class CreateOrdersCoffeeTable extends Migration
     public function up()
     {
         Schema::create('orders_coffee', function (Blueprint $table) {
-            $table->increments('orders_coffee_id');
+            $table->increments('id');
             $table->integer('order_id_fk');
             $table->integer('coffee_id_fk');
         });
