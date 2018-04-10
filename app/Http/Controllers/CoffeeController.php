@@ -16,7 +16,6 @@ class CoffeeController extends Controller
       //return $coffee;
       return view('coffees.show', compact('coffee'));
       
-      
     }
   
     public function showCoffees(){

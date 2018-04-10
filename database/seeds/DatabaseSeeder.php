@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+      
       DB::table('coffees')->insert([
         'name'=>'Suplicar Clemencia Dark',
         'roast'=>'dark',
@@ -56,6 +57,24 @@ class DatabaseSeeder extends Seeder
         'last_name'=>'Cappiello',
         'email'=>'purpleSoda@email.com',
         'phone'=>'555-252-1111'
+      ]);
+      
+      DB::table('users')->insert([
+        'user_name'=>'Søren Kierkegaard',
+        'user_password'=>'str_random(32)',
+        'email'=>'sdlfkj@email.com'
+      ]);
+      
+      DB::table('users')->insert([
+        'user_name'=>'Honore de Balzac',
+        'user_password'=>'str_random(32)',
+        'email'=>'sdfjpowjifg@email.com'
+      ]);
+      
+      DB::table('users')->insert([
+        'user_name'=>'Theodore Roosevelt',
+        'user_password'=>'str_random(32)',
+        'email'=>'dhgpurg@email.com'
       ]);
             
     }
