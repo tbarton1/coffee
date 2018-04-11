@@ -4,14 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class MembersController extends Controller
+use DB;
+use App\Member;
+
+class MemberController extends Controller
 {
-    public function show(Member $member){
+    public function show(Member $members){
       
       //$member = Member::find($id);
       
       //return $member;
-      return view('members.show', compact('member'));
+      return view('members.show', compact('members'));
       
     }
   

@@ -18,4 +18,10 @@ Route::get('/coffees/{coffee}', 'CoffeeController@show');
 
 Route::get('/coffees', 'CoffeeController@showCoffees');
 
-Route::get('/members', 'MembersController@showMembers');
+Route::get('/members/{members}', 'MemberController@show');
+
+Route::get('/members', 'MemberController@showMembers');
+
+Route::get('/users/{users}', 'UserController@show');
+
+Route::get('/users', 'UserController@showUsers');

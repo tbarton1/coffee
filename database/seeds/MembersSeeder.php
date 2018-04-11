@@ -61,19 +61,19 @@ class DatabaseSeeder extends Seeder
       
       DB::table('users')->insert([
         'user_name'=>'Søren Kierkegaard',
-        'user_password'=>'str_random(32)',
+        'user_password'=>str_random(32),
         'email'=>'sdlfkj@email.com'
       ]);
       
       DB::table('users')->insert([
         'user_name'=>'Honore de Balzac',
-        'user_password'=>'str_random(32)',
+        'user_password'=>str_random(32),
         'email'=>'sdfjpowjifg@email.com'
       ]);
       
       DB::table('users')->insert([
         'user_name'=>'Theodore Roosevelt',
-        'user_password'=>'str_random(32)',
+        'user_password'=>str_random(32),
         'email'=>'dhgpurg@email.com'
       ]);
             

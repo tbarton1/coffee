@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+;
 use Illuminate\Http\Request;
+
+use DB;
+use App\User;
 
 class UserController extends Controller
 {
@@ -10,8 +13,8 @@ class UserController extends Controller
       
       //$users = User::find($id);
       
-      //return $user;
-      return view('users.show', compact('user'));
+      //return $users;
+      return view('users.show', compact('users'));
       
     }
   
@@ -20,7 +23,7 @@ class UserController extends Controller
       // $users - DB::tables('users')->get();
       
       // Eloquent syntax
-        $users = Users::all();
+        $users = User::all();
       
         return view('users.index', compact('users'));
     }
