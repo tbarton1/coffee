@@ -9,6 +9,25 @@ use App\Coffee;
 
 class CoffeeController extends Controller
 {
+  
+    public function show(Coffee $coffee){
+      
+      return view('coffees.show', compact('coffee'));
+      
+    }
+  
+    public function showCoffees(){
+      
+        $coffees = Coffee::all();
+      
+        return view('coffees.index', compact('coffees'));
+    }
+      
+}
+
+
+/*class CoffeeController extends Controller
+{
     public function show(Coffee $coffee){
       
       //$coffee = Coffee::find($id);
@@ -28,4 +47,4 @@ class CoffeeController extends Controller
         return view('coffees.index', compact('coffees'));
     }
       
-}
+}*/

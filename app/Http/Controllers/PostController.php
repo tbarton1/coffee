@@ -4,18 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use DB;
+use App\Post;
+
 class PostController extends Controller
 {
-    public function index()
+  
+    public function show(Post $post){
       
-    {
-      return view('posts.index');
+      return view('posts.show', compact('post'));
+    
     }
   
-    public function show()
+  
+    public function showPosts(){
       
-    {
-      return view('posts.show');
+      $posts = Post::all();
+      
+      return view('posts.index', compact('post'));
+    
     }
   
     
