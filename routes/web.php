@@ -29,6 +29,8 @@ Route::get('/users', 'UserController@showUsers');
 
 // posts
 
-Route::get('/posts/{post}', 'PostController@show');
-
 Route::get('/posts', 'PostController@showPosts');
+
+Route::get('/posts/create', 'PostController@create');
+
+//Route::get('/posts/{post}', 'PostController@show');
